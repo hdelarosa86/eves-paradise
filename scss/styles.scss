@@ -1,0 +1,558 @@
+/*COLORS*/
+$primary-color: #f2f4f3; /*off-gray*/
+$secondary-color: #cea0af; /*lilac*/
+$tertiary-color: #b279a7; /*dark lilac*/
+$accent-color: #3b1c32; /*plum*/
+$font-color: #c6c5b9;
+$font-stack: 'Muli', sans-serif;
+
+/*GRID*/
+
+$full-width: 100%;
+$half-width: percentage(1/2);
+$third-width: percentage(1/3);
+$quarter-width: percentage(1/4);
+
+/*MIXINS*/
+
+/*===GLOBAL/TYPOGRAPHY===*/
+
+body, html{
+	height: 100%;
+	position: relative;
+	font: 10px $font-stack;
+	line-height: 1.6em;
+}
+
+p{
+	font-size: 1.6em;
+	font-weight: 300;
+	letter-spacing: .01em;
+	color: $font-color;
+	line-height: 1.6em;
+}
+
+h1{
+	font-size: 3.8em;
+	text-transform: uppercase;
+	color: $secondary-color;
+}
+
+h2{
+	font-size: 3.2em;
+	text-transform: capitalize;
+}
+
+h3{
+	font-size: 2.4em;
+	text-transform: uppercase;
+}
+
+h4{
+	font-size: 2em;
+}
+
+h1,h2,h3,h4{
+	font-weight: 300;
+	margin: .75em 0;
+	line-height: 1.2em;
+}
+
+a{
+	font-size: 1.6em;
+}
+
+figure{
+	width: 100%;
+	margin: 1em auto;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+ul{
+	list-style: none;
+	padding-left: 0;
+	font-size: 1.8em;
+	color: $font-color;
+	font-weight: 300;
+	line-height: 2em;
+}
+
+/*===LAYOUT===*/
+
+#back-to-top{
+	display: none;
+	color: $secondary-color;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: fixed;
+	bottom: 1%;
+	right: 1.5%;
+	font-size: 2.2em;
+	background-color: rgba(0,0,0,.10);
+	padding: .5em .25em;
+	z-index: 99;
+	transition: background-color .2s ease;
+}
+
+#back-to-top:hover{
+	color: $tertiary-color;
+	background-color: rgba(0,0,0,.50);
+}
+
+/*===HEADER===*/
+
+#company-logo{
+	max-width: 100px;
+	min-height: 100px;
+	margin: 1em auto;
+}
+
+/*===NAVIGATION===*/
+
+header{
+
+	a{
+		text-decoration: none;
+		color: $font-color;
+		text-align: center;
+		padding: 1.6em 1em;
+		font-weight: 300;
+		border-bottom: 1px solid $font-color;
+		background-color: $primary-color;
+		transition: all .2s ease-in;
+
+
+		&:not(:first-child){
+			display: none;
+
+			&:focus{
+			outline: none;
+			text-decoration: underline;
+			color: $secondary-color;
+			}
+		}
+
+		&:hover{
+			color: $secondary-color;
+		}
+
+		&:active{
+			color: $secondary-color;
+			outline: none;
+		}
+	}
+
+	#nav-icon{
+		display: block;
+		font-size: 3em;
+		padding: .75em 1em;
+		border-top: 1px solid $font-color;
+	}
+
+	.responsive a{
+		display: block;
+	}
+}
+
+/*===JUMBOTRON===*/
+
+.hero-image{
+	background-image: url('../images/hero-img-1.jpg');
+	width: 100%;
+	height: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+/*===MAIN===*/
+
+.container{
+	padding: 1em;
+	text-align: center;
+
+	h1{
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		.company-name{
+			text-transform: capitalize;
+		}
+	}
+
+	h3{
+		text-decoration: underline;
+	}
+
+	.profile-pic{
+		width: 60%;
+		padding-bottom: 60%;
+		margin: 1em auto;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#jody-ann{
+		background-image: url('../images/profile-pic-1.jpg');
+	}
+
+	#alex-green{
+		background-image: url('../images/profile-pic-6.jpg');
+	}
+
+	#francine-fulton{
+		background-image: url('../images/profile-pic-7.jpg');
+	}
+}
+
+#about-section{
+	border-bottom: 1px solid $primary-color;
+}
+
+	/*===Service Page===*/
+
+.service-page{
+
+	text-align: center;
+
+	h1{
+		text-align: center;
+	}
+
+	h2{
+		text-decoration: underline;
+	}
+
+	ul{
+		font-size: 1.6em;
+		li{
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+		}
+
+		li:nth-of-type(even){
+			margin-bottom: 1em;
+			padding-bottom: 1em;
+			border-bottom: 1px dotted $font-color;
+		}
+	}
+}
+	/*===Contact Page===*/
+
+.contact-page{
+	
+	.contact-info{
+		display: inline-block;
+
+		.fa{
+			color: $tertiary-color;
+		}
+		
+		&:last-child{
+			padding-left: 1em;
+			text-align: left;
+		}
+	}
+
+	.map-container{
+		position: relative;
+		padding-bottom: 75%;
+		height: 0;
+		overflow: hidden;
+		margin: 5em auto;
+		border: 3px solid $tertiary-color;
+	}
+}
+
+/*===FOOTER===*/
+
+footer{
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: $tertiary-color;
+
+	h4{
+		color: $font-color;
+	}
+
+	.footer-nav, .social-well{
+		margin: auto;
+
+		a{
+			color: $secondary-color;
+			text-decoration: none;
+			margin: 0 .50em;
+			transition: all .2s ease-in;
+
+			i{
+				font-size: 1.5em;
+				padding: .20em;
+			}
+
+			&:focus{
+				outline: none;
+				text-decoration: underline;
+				color: $font-color;
+
+				i{
+					outline: auto $accent-color 1px;
+				}
+			}
+
+			&:hover{
+				color: $font-color;
+			}
+		}
+	}
+}
+
+/*===MEDIA QUERIES===*/
+
+@media only screen and (min-width: 768px){
+
+	/*TABLET STYLE*/
+
+	/*===HEADER===*/
+
+	header{
+
+		border-bottom: 1px solid $primary-color;
+
+		#company-logo, #main-nav{
+			width: $half-width;
+		}
+
+		#company-logo{
+			float: none;
+			margin: 1em auto;
+		}
+	
+		#main-nav{
+			float: none;
+			padding: 1.25em 0;
+			margin: auto;
+			text-align: center;
+		}
+
+		#nav-icon{
+			display: none;
+		}
+	}
+
+	/*===NAVIGATION===*/
+
+	header{
+
+		#main-nav a:not(:first-child){
+			display: inline-block;
+			padding: 0 .9em;
+			border-bottom: none;
+			background-color: transparent;
+		}
+
+		#main-nav a:hover{
+			color: $secondary-color;
+		}
+	}
+
+	/*===MAIN===*/
+
+	.container{
+
+		h1{
+			.company-name{
+  				font: 300 3em/0.8 'Cookie', Helvetica, sans-serif;
+  			}
+		}
+	}
+
+	.col{
+		float: left;
+		width: $half-width;
+		padding: 1.6em;
+		box-sizing: border-box;
+	}
+
+	.service-page{
+
+		text-align: center;
+
+		.service-section{
+			width: 70%;
+			margin: auto;
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		h2{
+			text-decoration: underline;
+		}
+
+		ul{
+			font-size: 1.6em;
+
+			li{
+				width: 49%;
+
+				&:nth-of-type(odd){
+					text-align: left;
+				}
+				&:nth-of-type(even){
+					text-align: right;
+					border-bottom: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}/*END TABLET STYLES*/
+
+@media only screen and (min-width: 940px){
+/*DESKTOP STYLE*/
+	/*===GLOBAL/TYPOGRAPHY===*/
+	/*===LAYOUT===*/
+
+	.col-container{
+		width: 100%;
+	}
+
+	.col{
+		float: left;
+		width: $quarter-width;
+		padding: 1.6em;
+		box-sizing: border-box;
+	}
+
+	.container{
+	width: 960px;
+	margin: auto;
+
+	.profile-section{
+		padding: 5em 10em;
+
+		.profile-info{
+			width: 50%;
+			margin: 0 5em;
+		}
+
+		&:nth-of-type(odd){
+
+			.profile-info{
+				float: right;
+			}
+
+			.profile-pic{
+				float: left;
+			}
+		}
+
+		&:nth-of-type(even){
+
+			.profile-info{
+				float: left;
+			}
+
+			.profile-pic{
+				float: right;
+			}
+		}
+	}
+
+	.profile-pic{
+		width: 30%;
+		padding-bottom: 30%;
+		margin: 1em auto;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	#about-section{
+		border-bottom: 1px solid $primary-color;
+	}
+}
+
+
+	/*===HEADER===*/
+
+	header{
+		#company-logo, #main-nav{
+			width: $half-width;
+		}
+
+		#company-logo{
+			float: left;
+			margin-left: 4em;
+		}
+
+		#main-nav{
+			float: right;
+			padding: 6em 2em 6em 0;
+			text-align: right;
+		}
+	}
+
+	/*===JUMBOTRON===*/
+
+	.hero-image{
+		/*Parallax*/
+		height: 75%;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-bottom: 1px solid $primary-color; 
+	}
+
+	/*===MAIN===*/
+
+	.about-section.animation-element, .col.animation-element{
+  		opacity: 0;
+  		-moz-transition: all 700ms ease-out;
+  		-webkit-transition: all 700ms ease-out;
+  		-o-transition: all 700ms ease-out;
+  		transition: all 700ms ease-out;
+  		-moz-transform: translate3d(0px, 100px, 100px);
+  		-webkit-transform: translate3d(0px, 100px, 100px);
+  		-o-transform: translate(0px, 100px, 100px);
+  		transform: translate3d(0px, 100px, 100px);
+  		-webkit-backface-visibility: hidden;
+  		backface-visibility: hidden;
+  		position: relative;
+	}
+
+	.about-section.animation-element.in-view, .col.animation-element.in-view{
+		opacity: 1;
+  		-moz-transform: translate3d(0px, 0px, 0px);
+ 		-webkit-transform: translate3d(0px, 0px, 0px);
+ 		-o-transform: translate(0px, 0px);
+  		transform: translate3d(0px, 0px, 0px);
+	}
+
+	.contact, .salon-hours{
+		display: inline-block;
+		box-sizing: border-box;
+		width: 49%;
+		vertical-align: top;
+	}
+}
+
