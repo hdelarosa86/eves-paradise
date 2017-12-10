@@ -4,14 +4,8 @@ var currentYear = document.getElementById('current-year');
 currentYear.innerText = date.getFullYear();
 
 function showNav(){
-	
-	var topNav = document.getElementById('main-nav');	
-
-	if (topNav.className === "top-nav"){
-		 topNav.className += " responsive";
-	} else {
-		 topNav.className = "top-nav";
-	}
+	var mainNav = $('#main-nav');
+	mainNav.toggleClass('responsive');
 }
 
 $(document).ready(function(){
