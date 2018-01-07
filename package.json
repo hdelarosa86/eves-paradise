@@ -6,6 +6,7 @@
   "main": "index.html",
   "scripts": {
     "lint:js": "eslint js/*.js",
+    "lint:css": "stylelint css/*.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +24,6 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-import": "^2.8.0"
+    "stylelint": "^8.4.0"
   }
 }
