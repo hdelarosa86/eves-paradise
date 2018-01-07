@@ -1,0 +1,24 @@
+{
+  "name": "eves-paradise",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.html",
+  "scripts": {
+    "lint:css": "stylelint css/*.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdelarosa86/eves-paradise.git"
+  },
+  "author": "Hector DelaRosa",
+  "license": "Copyright (C) Hector DelaRosa",
+  "bugs": {
+    "url": "https://github.com/hdelarosa86/eves-paradise/issues"
+  },
+  "homepage": "https://github.com/hdelarosa86/eves-paradise#readme",
+  "devDependencies": {
+    "stylelint": "^8.4.0"
+  }
+}
